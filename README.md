@@ -107,7 +107,7 @@ A utilização do **Docker** pois facilita bastante o desenvolvimento de apps qu
 
 * **Otimização para Dados Semi-Estruturados e Logs:** Uma melhoria seria a transição para um banco de dados mais adequado para dados semi-estruturados e eficiente no gerenciamento de logs, como **Elasticsearch** ou **MongoDB**. Esses bancos de dados são projetados para lidar com a flexibilidade e o volume de logs, oferecendo melhor desempenho para buscas e ingestão de dados.
 * **Buscas Assíncronas:** Implementar o uso de **bibliotecas que suportem operações assíncronas** para acesso ao banco de dados. Isso tornará as buscas de dados mais eficientes e não bloqueantes, diminuindo a latência e melhorando significativamente a performance geral da aplicação.
-
+* Recuperar informações sensíveis, como usuário e senha do banco de dados, a partir de uma fonte segura.
 ---
 
 ## Aplicação
