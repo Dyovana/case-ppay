@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-local
+    restart: always
+
+    environment:
+      POSTGRES_USER: userpicpay
+      POSTGRES_PASSWORD: senhapicpay
+      POSTGRES_DB: bdpicpay
+      TZ: UTC
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./01-init.sql:/docker-entrypoint-initdb.d/01-init.sql
+
+volumes:
+  pgdata:

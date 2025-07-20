@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS logs_request (
+  id SERIAL PRIMARY KEY,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  request JSON,
+  category TEXT,
+  result JSON
+);
