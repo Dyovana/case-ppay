@@ -1,13 +1,12 @@
 import pickle
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, Request, Depends
+from fastapi import FastAPI
 
 from src.config.logging import setup_logger
 from src.controllers.default import default_router
 from src.controllers.handlers import register_exception_handlers
 from src.resources.resources_config import MODEL_PATH
-from src.services.predict_service import PredictService
 
 logger = setup_logger()
 
@@ -33,7 +32,6 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
-#app.dependency_overrides[PredictService] = get_predict_service
 
 register_exception_handlers(app)
 app.include_router(default_router)
